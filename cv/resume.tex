@@ -1,0 +1,241 @@
+% Dr. Geoff Boeing - Curriculum Vitae
+% Copyright 2020 Geoff Boeing
+% Email: boeing@usc.edu
+% Web: https://geoffboeing.com/
+% Repo: https://github.com/gboeing/cv
+
+\documentclass[12pt,letterpaper]{report}
+
+\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) so accented characters are a single glyph
+\usepackage[utf8]{inputenc} % allow input of utf-8 encoded characters
+\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\usepackage[USenglish]{babel} % automatically regionalize hyphens, quote marks, etc
+\usepackage{microtype} % improves text appearance with kerning, etc
+\usepackage{datetime} % enable formatting of date output
+\usepackage{tabto} % make nice tabbing
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
+\usepackage{geometry} % manually set page margins
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{titlesec} % allow custom section fonts
+
+% what is your name?
+\newcommand{\myname}{Zengqiang (John) Yan}
+
+% define a default font face and set it as the body font
+\usepackage{crimson} % document's serif font
+\usepackage{helvet}  % document's sans serif font
+
+% define how far to tab for list items with left-aligned date - different font faces need different widths
+\newcommand{\listtabwidth}{1.75cm}
+
+% set name font to title the document
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% set section heading fonts and before/after spacing
+\SetTracking{encoding=*}{20}
+\titleformat{\section}{\sffamily\small\bfseries\lsstyle\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{24pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
+
+% set subsection heading fonts and before/after spacing
+\titleformat{\subsection}{\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+
+% set page margins
+\geometry{body={6.5in, 9.0in},
+	left=1.0in,
+	top=1.0in}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% define space between list items
+\newcommand{\listitemspace}{0.15em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+			\setlength{\parskip}{0em}
+			\setlength{\itemsep}{\listitemspace}
+			\setlength{\parsep}{\listitemspace}}}
+	{\end{list}}
+
+% make tabbed lists so content is left-aligned next to years
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+	labelindent=0em,
+	topsep=0em,
+	partopsep=0em,
+	itemsep=\listitemspace,
+	parsep=\listitemspace,
+	font=\normalfont}
+
+% print the month and year only when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define hyperlink appearance and metadata for pdf properties
+\hypersetup{
+	colorlinks  = true,
+	urlcolor    = black,
+	pdfauthor   = {\myname},
+	pdfkeywords = {city planning, housing, street networks, transportation, urban design, urban informatics},
+	pdftitle    = {\myname: Curriculum Vitae},
+	pdfsubject  = {Curriculum Vitae},
+	pdfpagemode = UseNone
+}
+
+\begin{document}
+	\raggedright
+	
+	% display name as the document title
+	\namefont{\myname}
+	
+	% contact info
+	\vspace{1em}
+	\begin{minipage}[t]{0.6\textwidth}
+		\textbf{Post-Doctoral Fellow}\\
+		Department of Computer Science and Engineering \\
+		Hong Kong University of Science and Technology
+		%\\Los Angeles, California, USA
+	\end{minipage}
+	\begin{minipage}[t]{0.39\textwidth}
+		Email: \href{mailto:z.yan@connect.ust.hk}{z.yan@connect.ust.hk} \\
+		Phone: +852 6153 1250 \\
+		Web: \href{http://www.cse.ust.hk/~zyanad/}{http://www.cse.ust.hk/~zyanad/}
+	\end{minipage}
+	\vspace{0.5em}
+	
+	
+	
+	\section*{Education}
+	
+	\begin{tablist}
+		
+		\item[Ph.D.] \tab Computer Science and Engineering, Hong Kong University of Science and Technology, 2020
+		
+		\item[M.S.]  \tab Information Engineering, Huazhong University of Science and Technology, China, 2016
+		
+		\item[B.S.]  \tab Information Engineering, Huazhong University of Science and Technology, China, 2013
+		
+	\end{tablist}
+	
+	
+	
+	\section*{Academic Appointments}
+	
+	\begin{tablist}
+		
+		\item[2020.09 - present]   \tab Hong Kong University of Science and Technology \\
+		\tab Postdoctoral Research Fellow, Department of Computer Science and Engineering
+		
+	\end{tablist}
+	
+	
+	
+	\section*{Research Areas}
+	
+	\begin{itemize}
+		
+		\item Deep learning: domain adaptation, federated learning
+		
+		\item Medical imaging: retinal vessel segmentation, gland instance segmentation, prostate cancer detection
+		
+	\end{itemize}
+	
+	\section*{Selected Publications}
+	
+	\href{https://scholar.google.com.hk/citations?hl=zh-CN&user=j0-TqGAAAAAJ&view_op=list_works}{[Full Publications]}
+	
+	\subsection*{Under Review/Submission}
+	
+	\begin{tablist}
+		
+		\item[2020] \tab \textbf{Z. Yan}, J. Wicaksana, Shichao Li, X. Yang, and K. -T. Cheng. \enquote{Cycle\textsuperscript{2}GAN: Weakly Supervised Image-to-Image Translation for Medical Image Data.} preparing for \textit{IEEE Transactions on Medical Imaging}.
+		
+		\item[2020] \tab \textbf{Z. Yan}, J. Wicaksana, Shichao Li, and K. -T. Cheng. \enquote{Weakly Supervised Domain Adaptation for Tumor Segmentation in Breast Ultrasound Images.} preparing for \textit{IEEE Transactions on Medical Imaging}.
+		
+		\item[2020] \tab Shichao Li, \textbf{Z. Yan}, Hongyang Li, and K. -T. Cheng. \enquote{Exploring Intermediate Representation for Monocular Vehicle Pose Estimation.} submitted to \textit{CVPR}.
+		
+	\end{tablist}
+		
+	\subsection*{Articles in Peer-Reviewed Journals}
+	
+	\begin{tablist}
+		
+		\item[2020] \tab \textbf{Z. Yan}, J. Wicaksana, Z. Wang, X. Yang, and K. -T. Cheng. \enquote{Variation-Aware Federated Learning with Multi-Source Decentralized Medical Image Data.} \textit{IEEE Journal of Biomedical and Health Informatics}, in press.
+		
+		\item[2020] \tab \textbf{Z. Yan}, X. Yang, and K. -T. Cheng. \enquote{Enabling a Single Deep Learning Model for Accurate Gland Instance Segmentation: A Shape-Aware Adversarial Learning Framework.} \textit{IEEE Transactions on Medical Imaging}, 39 (6), 2176-2189, 2020.
+		
+		\item[2019] \tab \textbf{Z. Yan}, X. Yang, and K. -T. Cheng. \enquote{A Three-Stage Deep Learning Model for Accurate Retinal Vessel Segmentation.}  \textit{IEEE Journal of Biomedical and Health Informatics}, 23 (4), 1427-1436, 2019. \textbf{ESI Highly Cited Paper}
+		
+		\item[2018] \tab \textbf{Z. Yan}, X. Yang, and K. -T. Cheng. \enquote{Joint Segment-Level and Pixel-Wise Losses for Deep Learning based Retinal Vessel Segmentation.} \textit{IEEE Transactions on Biomedical Engineering}, 65 (9), 1912-1923, 2018.
+		
+		\item[2018] \tab \textbf{Z. Yan}, X. Yang, and K. -T. Cheng. \enquote{A Skeletal Similarity Metric for Quality Evaluation of Vessel Segmentation.} \textit{IEEE Transactions on Medical Imaging}, 37 (4), 1045-1057, 2018.
+		
+		\item[2018] \tab K. Ikeuchi, Z. Ma, \textbf{Z. Yan}, S. Kudoh, and M. Nakamura. \enquote{Describing Upper Body Motions based on the Labanotation for Learning-from-Observation Robots.} \textit{International Journal of Computer Vision}, 126 (12), 1415-1429, 2018.
+		
+%		\item[2017] \tab H. Deng, J. Wu, L. Zhu, \textbf{Z. Yan}, and L. Yu. \enquote{Texture Edge-Guided Depth Recovery for Structured Light-based Depth Sensor.} \textit{Multimedia Tools and Applications}, 76 (3), 4211-4226, 2017.
+%		
+%		\item[2017] \tab C. Zhu, L. Yu, \textbf{Z. Yan},and S. Xiang. \enquote{Frequency Estimation of the Plenoptic Function Using the Autocorrelation Theorem.} \textit{IEEE Transactions on Computational Imaging}, 3 (4), 1045-1057, 2017.
+%		
+%		\item[2014] \tab \textbf{Z. Yan}, L. Yu, Y. Yang, and Q. Liu. \enquote{Beyond the Interference Problem: Hierarchical Patterns for Multiple-Projector Structured Light System.} \textit{Applied Optics}, 53 (17), 3621-3632, 2014.
+		
+	\end{tablist}
+
+	
+	
+	\subsection*{Conference Proceedings}
+	
+	\begin{tablist}
+		
+		\item[2018] \tab \textbf{Z. Yan}, X. Yang, and K. -T. Cheng. \enquote{A Deep Model with Shape-Preserving Loss for Gland Instance Segmentation.} \textit{International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)}, pp. 138-146, 2018.
+		
+%		\item[2015] \tab \textbf{Z. Yan}, L. Yu, and Z. Xiong. \enquote{Texture-Free Large-Area Depth Recovery for Planar Surfaces.} \textit{IEEE 17th International Workshop on Multimedia Signal Processing (MMSP)}, pp. 1-6, 2015.
+%		
+%		\item[2015] \tab \textbf{Z. Yan}, L. Yu, and Z. Xiong. \enquote{Large-Area Depth Recovery for RGB-D Camera.} \textit{IEEE International Conference on Image Processing (ICIP)}, pp. 1409-1413, 2015.
+		
+	\end{tablist}
+
+
+	
+	\section*{Awards and Honors}
+	
+	\begin{tablist}
+		
+		\item[2015] \tab Top 10\% Paper Award, IEEE MMSP
+		
+		\item[2015] \tab Travel Award, IEEE ICIP
+		
+	\end{tablist}
+	
+	
+	
+	\section*{Service}
+	
+	\subsection*{Academic Journal Peer Review}
+	
+	\begin{itemize}
+		
+		\item \textit{IEEE Journal of Biomedical and Health Informatics}
+		\item \textit{IEEE Transactions on Medical Imaging}
+		\item \textit{IEEE Transactions on Cybernetics}
+		
+	\end{itemize}
+	
+	\subsection*{Academic Conference Peer Review}
+	
+	\begin{itemize}
+		
+		\item \textit{MICCAI}
+		
+	\end{itemize}
+	
+	% display today's date as Month Year after a vertical space below the end of the text
+	\begin{center}
+		%\vspace{6em}
+		\vfill
+		Updated \monthyeardate\today
+	\end{center}
+	
+	
+\end{document}
